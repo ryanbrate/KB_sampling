@@ -18,7 +18,7 @@ python3 sample.py
 
 ### profile all samples.
 
-    i.e., what has been sampled?
+i.e., how many of each query combination have been sampled, for each config?
 
 ```python
 python3 profile_samples.py
