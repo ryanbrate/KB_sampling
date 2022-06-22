@@ -1,0 +1,1580 @@
+{
+    "srw:searchRetrieveResponse": {
+        "@xmlns:srw": "http://www.loc.gov/zing/srw/",
+        "@xmlns:tel": "http://krait.kb.nl/coop/tel/handbook/telterms.html",
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@xmlns:dc": "http://purl.org/dc/elements/1.1/",
+        "@xmlns:dcterms": "http://purl.org/dc/terms/",
+        "@xmlns:dcx": "http://krait.kb.nl/coop/tel/handbook/telterms.html",
+        "srw:version": "1.2",
+        "srw:totalMilliSeconds": "196",
+        "srw:searchEngineMilliSeconds": "194",
+        "srw:kbmdoMilliSeconds": "-1",
+        "srw:numberOfRecords": "269",
+        "srw:records": {
+            "srw:record": [
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-01-03",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232001:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232001:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 1, 03-01-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232001:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 1, 03-01-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232001:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232001:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "1"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-01-31",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232005:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232005:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 5, 31-01-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232005:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 5, 31-01-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232005:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232005:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "2"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-02-07",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232006:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232006:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 6, 07-02-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232006:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 6, 07-02-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232006:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232006:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "3"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-02-21",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232008:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232008:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 8, 21-02-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232008:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 8, 21-02-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232008:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232008:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "4"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-03-21",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232012:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232012:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 12, 21-03-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232012:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 12, 21-03-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232012:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232012:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "5"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-04-11",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232015:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232015:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 15, 11-04-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232015:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 15, 11-04-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232015:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232015:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "6"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-06-13",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232024:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232024:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 24, 13-06-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232024:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 24, 13-06-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232024:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232024:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "7"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-01-17",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232003:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232003:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 3, 17-01-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232003:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 3, 17-01-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232003:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232003:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "8"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-01-24",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232004:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232004:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 4, 24-01-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232004:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 4, 24-01-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232004:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232004:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "9"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-04-25",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232017:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232017:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 17, 25-04-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232017:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 17, 25-04-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232017:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232017:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "10"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-05-16",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232020:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232020:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 20, 16-05-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232020:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 20, 16-05-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232020:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232020:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "11"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-07-11",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232028:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232028:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 28, 11-07-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232028:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 28, 11-07-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232028:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232028:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "12"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-08-15",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232033:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232033:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 33, 15-08-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232033:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 33, 15-08-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232033:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232033:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "13"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-09-05",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232036:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232036:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 36, 05-09-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232036:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 36, 05-09-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232036:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232036:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "14"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-02-27",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233009:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233009:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 9, 27-02-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233009:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 9, 27-02-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233009:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233009:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "15"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-02-14",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232007:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232007:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 7, 14-02-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232007:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 7, 14-02-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232007:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232007:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "16"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-03-07",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232010:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232010:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 10, 07-03-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232010:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 10, 07-03-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232010:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232010:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "17"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-03-14",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232011:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232011:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 11, 14-03-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232011:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 11, 14-03-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232011:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232011:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "18"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-03-28",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232013:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232013:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 13, 28-03-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232013:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 13, 28-03-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232013:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232013:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "19"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-04-04",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232014:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232014:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 14, 04-04-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232014:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 14, 04-04-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232014:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232014:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "20"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-05-02",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232018:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232018:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 18, 02-05-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232018:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 18, 02-05-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232018:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232018:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "21"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-06-06",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232023:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232023:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 23, 06-06-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232023:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 23, 06-06-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232023:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232023:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "22"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-06-20",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232025:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232025:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 25, 20-06-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232025:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 25, 20-06-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232025:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232025:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "23"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-03-19",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233012:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233012:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 12, 19-03-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233012:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 12, 19-03-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233012:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233012:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "24"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-04-16",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233016:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233016:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1896, no 16, 16-04-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233016:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1896, no 16, 16-04-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233016:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233016:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "25"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-04-23",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233017:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233017:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 17, 23-04-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233017:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 17, 23-04-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233017:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233017:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "26"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-05-07",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233019:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233019:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 19, 07-05-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233019:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 19, 07-05-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233019:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233019:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "27"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-05-14",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233020:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233020:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 20, 14-05-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233020:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 20, 14-05-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233020:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233020:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "28"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-06-18",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233025:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233025:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 25, 18-06-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233025:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 25, 18-06-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233025:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233025:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "29"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-07-16",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233028:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233028:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 29, 16-07-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233028:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 29, 16-07-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233028:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233028:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "30"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-07-30",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233030:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233030:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 31, 30-07-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233030:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 31, 30-07-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233030:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233030:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "31"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-10-08",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233040:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233040:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 41, 08-10-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233040:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 41, 08-10-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233040:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233040:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "32"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-10-15",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233041:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233041:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 42, 15-10-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233041:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 42, 15-10-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233041:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233041:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "33"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-11-05",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233044:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233044:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 45, 05-11-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233044:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 45, 05-11-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233044:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233044:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "34"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-11-12",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233045:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233045:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 46, 12-11-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233045:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 46, 12-11-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233045:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233045:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "35"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-11-26",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233047:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233047:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 48, 26-11-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233047:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 48, 26-11-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233047:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233047:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "36"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-12-17",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233049:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233049:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 51, 17-12-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233049:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 51, 17-12-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233049:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233049:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "37"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-12-30",
+                        "dcterms:extent": "12",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233051:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233051:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 53, 30-12-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233051:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 53, 30-12-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233051:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233051:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "38"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-03-12",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233011:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233011:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 11, 12-03-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233011:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 11, 12-03-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233011:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233011:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "39"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-06-04",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233023:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233023:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 23, 04-06-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233023:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 23, 04-06-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233023:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233023:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "40"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1896-09-03",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2233035:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2233035:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 4, 1896, no 36, 03-09-1896",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2233035:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 4, 1896, no 36, 03-09-1896",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2233035:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2233035:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "41"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-01-10",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232002:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232002:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 2, 10-01-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232002:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 2, 10-01-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232002:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232002:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "42"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-02-28",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232009:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232009:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 9, 28-02-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232009:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 9, 28-02-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232009:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232009:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "43"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-04-18",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232016:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232016:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 16, 18-04-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232016:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 16, 18-04-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232016:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232016:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "44"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-05-09",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232019:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232019:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 19, 09-05-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232019:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 19, 09-05-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232019:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232019:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "45"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-07-04",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232027:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232027:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 27, 04-07-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232027:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 27, 04-07-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232027:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232027:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "46"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-07-18",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232029:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232029:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 29, 18-07-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232029:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 29, 18-07-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232029:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232029:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "47"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-08-08",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232032:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232032:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 32, 08-08-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232032:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 32, 08-08-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232032:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232032:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "48"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-08-22",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232034:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232034:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 34, 22-08-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232034:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 34, 22-08-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232034:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232034:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "49"
+                },
+                {
+                    "srw:recordPacking": "xml",
+                    "srw:recordSchema": "info:srw/schema/1/dc-v1.1",
+                    "srw:recordData": {
+                        "dc:date": "1895-09-12",
+                        "dcterms:extent": "8",
+                        "dc:identifier": "http://resolver.kb.nl/resolve?urn=dts:2232037:mpeg21",
+                        "dcx:thumbnail": "http://resolver.kb.nl/resolve?urn=dts:2232037:mpeg21:0001:image",
+                        "dcterms:alternative": [
+                            "De athleet jrg 3, 1895, no 37, 12-09-1895",
+                            "De athleet"
+                        ],
+                        "OaiPmhIdentifier": "DTS:dts:2232037:mpeg21",
+                        "dc:language": "dut",
+                        "dc:source": "Koninklijke Bibliotheek",
+                        "dcx:DelpherPublicationDate": "Tue Nov 18 01:00:00 CET 2014",
+                        "dc:type": "Aflevering",
+                        "dc:title": "De athleet jrg 3, 1895, no 37, 12-09-1895",
+                        "dcterms:isPartOf": [
+                            "De athleet",
+                            "Digitale Tijdschriften",
+                            "DTS"
+                        ],
+                        "dcx:titlePage": "http://resolver.kb.nl/resolve?urn=dts:2232037:mpeg21:0001",
+                        "dc:publisher": "Blankenberg & Co., Leiden",
+                        "dcx:recordIdentifier": "dts:2232037:mpeg21",
+                        "dcx:issued": "2011-01-01",
+                        "dc:signatuur": "T 12696"
+                    },
+                    "srw:recordPosition": "50"
+                }
+            ]
+        },
+        "srw:echoedSearchRetrieveRequest": {
+            "srw:version": "1.2",
+            "srw:query": "(title exact \"De athleet\")",
+            "srw:startRecord": "1",
+            "srw:maximumRecords": "50",
+            "srw:recordSchema": "dc",
+            "srw:resultSetTTL": "300",
+            "srw:extraRequestData": {
+                "collection": "DTS_document"
+            }
+        }
+    }
+}
