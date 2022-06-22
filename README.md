@@ -10,7 +10,7 @@
 
 ## Perform statified sampling of KB OCR according to query criteria
 
-Refer to [Docs/sample_configs.json](sample_configs.json) and [config instructions](config_instructions.md). Sampling according to each config defined in sample\_configs.json is performed sequentially.
+Refer to [sample_configs.json](sample_configs.json) and [config instructions](Docs/config_instructions.md). Sampling according to each config defined in sample\_configs.json is performed sequentially.
 
 ```python
 python3 sample.py
@@ -18,10 +18,10 @@ python3 sample.py
 
 ### profile all samples.
 
-    parsed via frog (and ucto). 
+    i.e., what has been sampled?
 
 ```python
 python3 profile_samples.py
 ```
 
-outputs profile.csv in each config["output_dir"] wrt., configs defined in sample\_configs.json
+for each config in [sample_configs.json](sample_configs.json) outputs config["output_dir"]/profile.csv: a csv of "content_date window" VS "papertitle_artikel"
