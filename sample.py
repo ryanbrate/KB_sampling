@@ -77,12 +77,12 @@ def main():
 
                 # save the config file to json
                 with open(output_dir / "config.json", "w") as f:
-                    json.dump(config, f, indent=4)
+                    json.dump(config, f, indent=4, ensure_ascii=False)
 
                 # save the collection to json (save only non-empty)
                 if len(collection) > 0:
                     with open(output_dir / f"{queryString}.json", "w") as f:
-                        json.dump(collection, f, indent=4)
+                        json.dump(collection, f, indent=4, ensure_ascii=False)
 
 
 def process_response(ocr_url, response):
@@ -91,7 +91,7 @@ def process_response(ocr_url, response):
     ocr_name: str = re.match(".+=(.+)", ocr_url).group(1)  # name of record
 
     if response is not None:
-        ocr: dict = xmltodict.parse(response.text, encoding="utf-8")
+        ocr: dict = xmltodict.parse(response.text.encode("latin-1").decode("utf-8"))
         return (ocr_name, ocr)
     else:
         return (ocr_name, None)

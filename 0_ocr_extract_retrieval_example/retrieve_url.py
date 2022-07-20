@@ -2,9 +2,8 @@
 
 E.g.,
 python3 retrieve_url.py "http://resolver.kb.nl/resolve?urn=dts:2232001:mpeg21:0003:ocr"
-"http://resolver.kb.nl/resolve?urn=ddd:011200517:mpeg21:a0401:ocr"
-returns: dts:2232001:mpeg21:0003:ocr
 
+Viewable on browser as:
 "http://resolver.kb.nl/resolve?urn=MMKB15:000904012:mpeg21:a00011:ocr"
 
 """
@@ -27,8 +26,7 @@ def main(args):
 
     # get ocr as dict
     raw_response = get_response(url)
-    print(raw_response.text)
-    ocr = xmltodict.parse(raw_response.text)
+    ocr = xmltodict.parse(raw_response.text.encode("latin-1").decode("utf-8"))
     print(ocr)
 
     # save ocr sample to file
