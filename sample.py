@@ -15,7 +15,8 @@ import re
 import time
 import typing
 from collections import deque
-from itertools import starmap
+from itertools import cycle, starmap
+from multiprocessing import Pool
 
 import numpy as np
 import requests
@@ -57,32 +58,38 @@ def main():
             query_combinations: list[str] = get_config_combinations(config)
 
             # iterate over each query permutation wrt., current config
-            for queryString in query_combinations:
-
-                # get an iterable of ocr sample urls
-                ocr_urls: typing.Generator = gen_ocr_url_samples(
-                    queryString,
-                    preferred_sample_size=config["n"],
-                    block_size=config["block_size"],
+            with Pool() as p:
+                p.starmap(
+                    query, zip(query_combinations, cycle([config]), cycle([output_dir]))
                 )
 
-                # iterable of (ocr_url, response), not in the same order as ocr_ucrls
-                responses = gen_threaded(ocr_urls, f=get_response, chunk_size=10)
+            # save the config file to json
+            with open(output_dir / "config.json", "w") as f:
+                json.dump(config, f, indent=4, ensure_ascii=False)
 
-                #  mapping of (ocr_url, response) -> (ocr name, ocr)
-                collection = []
-                for ocr_url, response in tqdm(responses):
-                    ocr_name, ocr = process_response(ocr_url, response)
-                    collection.append((ocr_name, ocr))
 
-                # save the config file to json
-                with open(output_dir / "config.json", "w") as f:
-                    json.dump(config, f, indent=4, ensure_ascii=False)
+def query(queryString: str, config: dict, output_dir: pathlib.Path):
 
-                # save the collection to json (save only non-empty)
-                if len(collection) > 0:
-                    with open(output_dir / f"{queryString}.json", "w") as f:
-                        json.dump(collection, f, indent=4, ensure_ascii=False)
+    # get an iterable of ocr sample urls
+    ocr_urls: typing.Generator = gen_ocr_url_samples(
+        queryString,
+        preferred_sample_size=config["n"],
+        block_size=config["block_size"],
+    )
+
+    # iterable of (ocr_url, response), not in the same order as ocr_ucrls
+    responses = gen_threaded(ocr_urls, f=get_response, chunk_size=10)
+
+    #  mapping of (ocr_url, response) -> (ocr name, ocr)
+    collection = []
+    for ocr_url, response in tqdm(responses):
+        ocr_name, ocr = process_response(ocr_url, response)
+        collection.append((ocr_name, ocr))
+
+    # save the collection to json (save only non-empty)
+    if len(collection) > 0:
+        with open(output_dir / f"{queryString}.json", "w") as f:
+            json.dump(collection, f, indent=4, ensure_ascii=False)
 
 
 def process_response(ocr_url, response):
@@ -110,10 +117,12 @@ def get_config_combinations(config: dict) -> list[str]:
 
     # config["contains"] is a list of lists of words
     stack = expand_stack(
-        deque([""]), list(map(lambda x: " OR ".join(x), config["contains"]))
-    )  # NOTE: expand_stack, returns original/passed stack object if passed list empty
-
-    # NOTE: Hence, deque is at the least, [""], or otherwise a list of content word combinations e.g., ["zwart, zwarte", ""]
+        deque([""]),
+        list(
+            map(lambda x: " OR ".join(x) if type(x) == list else x, config["contains"])
+        ),
+    )
+    # NOTE: Hence, deque is at the least, [""], or otherwise a list of content word combinations e.g., ["zwart OR zwarte", ""]
 
     # ------
     # for each stack item, add a variation wrt., papertitles
