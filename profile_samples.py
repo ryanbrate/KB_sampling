@@ -15,7 +15,7 @@ from pprint import pp
 
 import pandas as pd
 
-DEBUG = True
+DEBUG = False
 
 
 def main():
