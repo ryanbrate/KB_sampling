@@ -70,26 +70,30 @@ def main():
 
 def query(queryString: str, config: dict, output_dir: pathlib.Path):
 
-    # get an iterable of ocr sample urls
-    ocr_urls: typing.Generator = gen_ocr_url_samples(
-        queryString,
-        preferred_sample_size=config["n"],
-        block_size=config["block_size"],
-    )
+    output_fp = output_dir / f"{queryString}.json"
+    if output_fp.exists():
+        pass  # skip if file already exists
+    else:
+        # get an iterable of ocr sample urls
+        ocr_urls: typing.Generator = gen_ocr_url_samples(
+            queryString,
+            preferred_sample_size=config["n"],
+            block_size=config["block_size"],
+        )
 
-    # iterable of (ocr_url, response), not in the same order as ocr_ucrls
-    responses = gen_threaded(ocr_urls, f=get_response, chunk_size=10)
+        # iterable of (ocr_url, response), not in the same order as ocr_ucrls
+        responses = gen_threaded(ocr_urls, f=get_response, chunk_size=10)
 
-    #  mapping of (ocr_url, response) -> (ocr name, ocr)
-    collection = []
-    for ocr_url, response in tqdm(responses):
-        ocr_name, ocr = process_response(ocr_url, response)
-        collection.append((ocr_name, ocr))
+        #  mapping of (ocr_url, response) -> (ocr name, ocr)
+        collection = []
+        for ocr_url, response in tqdm(responses):
+            ocr_name, ocr = process_response(ocr_url, response)
+            collection.append((ocr_name, ocr))
 
-    # save the collection to json (save only non-empty)
-    if len(collection) > 0:
-        with open(output_dir / f"{queryString}.json", "w") as f:
-            json.dump(collection, f, indent=4, ensure_ascii=False)
+        # save the collection to json (save only non-empty)
+        if len(collection) > 0:
+            with open(output_fp, "w") as f:
+                json.dump(collection, f, indent=4, ensure_ascii=False)
 
 
 def process_response(ocr_url, response):
