@@ -1,19 +1,31 @@
 [
     {
-        "name": "example",
-        "output_dir": "~/Data/Feature_Exploration/KB_sampling/example",
-        "description": "an example",
-        "n": 10,
-        "block_size": 3,
+        "name": "ALL",
+        "output_dir": "~/surfdrive/Data/KB_sampling/ALL",
+        "description": "",
+        "n": -1,
+        "contiguous_n": 1000,
+        "recordData": [
+            "ddd:papertitle",
+            "ddd:accessible",
+            "ddd:metadataKey",
+            "ddd:edition",
+            "dc:title",
+            "ddd:spatialCreation",
+            "ddd:spatial",
+            "ddd:issued",
+            "dc:date",
+            "dcx:DelpherPublicationDate",
+            "dc:publisher"
+        ],
         "types": [
             "artikel"
         ],
         "papertitles": [
-            "De standaard"
         ],
         "dates_within": [
-            "1920-01-01 1929-12-31",
-            "1930-01-01 1939-12-31"
+            "1940-01-01 1940-12-31",
+            "1990-01-01 1990-12-31"
         ],
         "contains": []
     }
