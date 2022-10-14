@@ -1,7 +1,4 @@
 """
-NOTE: samples all sampling configurations as defined in ./sample_configs.json
-see README for details. Those configurations for which data exists are skipped.
-
 Run:
 # python3 sample.py
 """
@@ -9,291 +6,210 @@ Run:
 import concurrent.futures
 import itertools
 import json
-import math
 import pathlib
 import re
 import time
 import typing
-from collections import deque
-from itertools import cycle, starmap
-from multiprocessing import Pool
+from functools import partial
+from itertools import product, starmap
 
 import numpy as np
+import pandas as pd
 import requests
 import xmltodict
 from tqdm import tqdm
 
+base = "http://jsru.kb.nl/sru/sru?recordSchema=ddd&x-collection=DDD_artikel"
+
 
 def main():
-
-    # ------
-    # Load the variable configurations
-    # ------
 
     with open("sample_configs.json", "r") as f:
         configs: list[dict] = json.load(f)
 
-    # ------
-    # perform sampling for each variable configuration
-    # ------
-
-    # iterate over each sampling configuration and run sample quering
+    # iterate over each sampling configuration
     for config in configs:
 
-        # folder to save samples
-        output_dir = pathlib.Path(config["output_dir"]).expanduser()
+        # config options
+        output_dir: pathlib.Path = (
+            pathlib.Path(config["output_dir"]).expanduser().resolve()
+        )  # folder to save samples
 
-        # already sampled ... skip
-        if output_dir.exists():
+        n_wanted: int = config["n"]  # sample size wanted
 
-            print(f"{output_dir} exits ... skipping")
-            continue  # skip config if looks like it's already been run
+        # generator of all query urls
+        queries: typing.Generator = gen_queries(config)
+
+        # ------
+        # iterate over queries and populate metadata dict
+        # ------
+        for query_url in tqdm(queries, desc="{processing queries}"):
+
+            # ------
+            # set up containers, fps and variables of interest wrt., query and
+            # sampled metadata output
+            # ------
+
+            # query part of query url
+            query_part: str = re.search(r"query=\((.+)\)", query_url).groups()[
+                0
+            ]
+
+            # container to hold sampled record metadata
+            metadata: dict = {
+                key: [] for key in config["recordData"]
+            }  
+
+            metadata_fp = output_dir / "metadata" / f"{query_part}.csv"
+            metadata_fp.parent.mkdir(exist_ok=True, parents=True)
+
+            n_available_: int = n_available(query_url)  # count of query results
+
+            if n_available_ == 0:
+                continue
+
+            # ------
+            # build a metadata csv wrt., query samples
+            # ------
+
+            if metadata_fp.exists() == False:
+
+                print(query_url)
+
+                # ------
+                # We sample metadata blocks by startIndex, where startIndex ~ range(n_available)
+                # records is an Iterable of (startIndex::int, metadata block::list[dict]) for each startIndex
+                # ------
+                if n_available_ > n_wanted and n_wanted != -1:  # only a subset wanted
+
+                    # querying metadata pages is slow ... we can speed this up
+                    # by getting contiguous blocks
+                    contiguous_n: int = config["contiguous_n"]
+
+                    # NOTE: relies on n_wanted%contiguous == 0
+                    random_sample_indices = np.random.choice(
+                        range(0, n_available_, contiguous_n),
+                        size=n_wanted // contiguous_n,
+                        replace=False,
+                    )  # start indices of metadata records to sample
+
+                    records = gen_threaded(
+                        random_sample_indices,
+                        f=partial(get_block, block_size=contiguous_n, query=query_url),
+                    )  # iterable of (block start index, block:list[dicts])
+
+                else:  # all queries results wanted
+
+                    start_indices = range(0, n_available_, 1000)
+
+                    records = gen_threaded(
+                        start_indices,
+                        f=partial(get_block, block_size=1000, query=query_url),
+                    )
+
+                # ------
+                # populate metadata::dict
+                # ------
+                with tqdm(
+                    total=(
+                        min(n_wanted, n_available_) if n_wanted != -1 else n_available_
+                    )
+                ) as pbar:
+                    for _, block_records in records:
+
+                        for record in block_records:
+                            for key in metadata.keys():
+                                if key in record:
+                                    metadata[key].append(record[key])
+                                else:
+                                    metadata[key].append(None)
+
+                        pbar.update(len(block_records))
+
+                # ------
+                # save csv of metadata
+                # ------
+                pd.DataFrame(metadata).to_csv(metadata_fp)
+
+
+def n_available(query: str) -> int:
+    """Returns the number::int of available records, given the query url"""
+
+    response: typing.Union[requests.Response, None] = get_response(query)
+    if response is None:
+        return 0
+    else:
+        response_dict: dict = xmltodict.parse(response.text)
+        n: int = int(response_dict["srw:searchRetrieveResponse"]["srw:numberOfRecords"])
+        return n
+
+
+def get_block(start_index: int, *, block_size: int, query: str) -> list[dict]:
+    """Returns a list of "srw:recordData" dicts."""
+
+    try:
+
+        response: typing.Union[requests.Response, None] = get_response(
+            query + f"&startRecord={start_index}&maximumRecords={block_size}",
+            request_kwargs={"timeout": 0.1},
+        )
+
+        # NOTE: n=1 vs n>1 results has a different form, dealt with here
+
+        if block_size == 1:
+
+            records = [
+                xmltodict.parse(response.text)["srw:searchRetrieveResponse"][
+                    "srw:records"
+                ]["srw:record"]["srw:recordData"]
+            ]
 
         else:
 
-            # create the output dir
-            output_dir.mkdir(exist_ok=True, parents=True)
+            records = [
+                x["srw:recordData"]
+                for x in xmltodict.parse(response.text)["srw:searchRetrieveResponse"][
+                    "srw:records"
+                ]["srw:record"]
+            ]
+        return records
 
-            # get all possible query combinations for the current config
-            query_combinations: list[str] = get_config_combinations(config)
+    except:
 
-            # iterate over each query permutation wrt., current config
-            with Pool() as p:
-                p.starmap(
-                    query, zip(query_combinations, cycle([config]), cycle([output_dir]))
-                )
-
-            # save the config file to json
-            with open(output_dir / "config.json", "w") as f:
-                json.dump(config, f, indent=4, ensure_ascii=False)
+        return []
 
 
-def query(queryString: str, config: dict, output_dir: pathlib.Path):
-
-    output_fp = output_dir / f"{queryString}.json"
-    if output_fp.exists():
-        pass  # skip if file already exists
-    else:
-        # get an iterable of ocr sample urls
-        ocr_urls: typing.Generator = gen_ocr_url_samples(
-            queryString,
-            preferred_sample_size=config["n"],
-            block_size=config["block_size"],
-        )
-
-        # iterable of (ocr_url, response), not in the same order as ocr_ucrls
-        responses = gen_threaded(ocr_urls, f=get_response, chunk_size=10)
-
-        #  mapping of (ocr_url, response) -> (ocr name, ocr)
-        collection = []
-        for ocr_url, response in tqdm(responses):
-            ocr_name, ocr = process_response(ocr_url, response)
-            collection.append((ocr_name, ocr))
-
-        # save the collection to json (save only non-empty)
-        if len(collection) > 0:
-            with open(output_fp, "w") as f:
-                json.dump(collection, f, indent=4, ensure_ascii=False)
-
-
-def process_response(ocr_url, response):
-    """Return (ocr_name: str, ocr: dict) or (ocr_name: str, None) if not found."""
-
-    ocr_name: str = re.match(".+=(.+)", ocr_url).group(1)  # name of record
-
-    if response is not None:
-        ocr: dict = xmltodict.parse(response.text.encode("latin-1").decode("utf-8"))
-        return (ocr_name, ocr)
-    else:
-        return (ocr_name, None)
-
-
-def get_config_combinations(config: dict) -> list[str]:
-    """Return a generator (of length n) of queries, corresponding to each
-    permutation in config.
-
+def gen_queries(config: dict):
+    """Return a generator of strings, where each string is query generated
+     from all possible combinations of query config options.
     E.g.,
     '"zwarte mensen" AND title exact Trouw AND type=artikel AND date within 1980-01-01 1989-12-31'
     """
 
-    # init stack object
-    stack = deque([])
+    # get lists of query string components
 
-    # config["contains"] is a list of lists of words
-    stack = expand_stack(
-        deque([""]),
-        list(
-            map(lambda x: " OR ".join(x) if type(x) == list else x, config["contains"])
-        ),
+    types: list[str] = list(map(lambda x: f'type="{x}"', config["types"]))
+
+    papertitles: list[str] = list(
+        map(lambda x: f'papertitle="{x}"', config["papertitles"])
     )
-    # NOTE: Hence, deque is at the least, [""], or otherwise a list of content word combinations e.g., ["zwart OR zwarte", ""]
 
-    # ------
-    # for each stack item, add a variation wrt., papertitles
-    # ------
-    if stack == deque([""]):  # i.e., previous features empty
-        f = lambda x: f'papertitle="{x}"'
-    else:
-        f = lambda x: f' AND papertitle="{x}"'
-    # final
-    stack = expand_stack(
-        stack, list(map(f, config["papertitles"]))
-    )  # NOTE: expand_stack, returns original/passed stack object if passed list empty
-
-    # NOTE: Hence, deque is at the least, [""], or otherwise a list query combination parts (strings)
-
-    # ------
-    # for each stack item, introduce a variation wrt., types
-    # ------
-    if stack == deque([""]):  # i.e., previous features empty
-        f = lambda x: f'type="{x}"'
-    else:
-        f = lambda x: f' AND type="{x}"'
-    # final
-    stack = expand_stack(
-        stack, list(map(f, config["types"]))
-    )  # NOTE: expand_stack, returns original/passed stack object if passed list empty
-
-    # NOTE: Hence, deque is at the least, [""], or otherwise a list query combination parts (strings)
-
-    # ------
-    # for each stack item, introduce a variation wrt., date windows
-    # ------
-    if stack == deque([""]):  # i.e., previous features empty
-        f = lambda x: f'date within "{x}"'
-    else:
-        f = lambda x: f' AND date within "{x}"'
-    # final
-    stack = expand_stack(
-        stack, list(map(f, config["dates_within"]))
-    )  # NOTE: expand_stack, returns original/passed stack object if passed list empty
-
-    # NOTE: Hence, deque is at the least, [""], or otherwise a list query combination parts (strings)
-
-    # ------
-    # yield the stack
-    # ------
-    if stack == deque([""]):  # yield nothing if stack empty
-        return []
-    else:
-        return list(stack)
-
-
-def expand_stack(stack: deque, li: list):
-    """Return a new stack object where e.g., stack = ['a', 'b'], and li = ['1','2']
-    returned  = ['a1', 'a2', 'b1', 'b2']
-
-    if li empty then return stack argument back
-    """
-
-    if len(li) > 0:
-
-        temp = deque([])
-
-        while stack:
-            stack_item = stack.pop()
-
-            for i in li:
-                temp.append(stack_item + i)
-
-        return temp
-
-    else:
-        return stack
-
-
-def gen_ocr_url_samples(
-    query: str, *, preferred_sample_size: int, block_size: int
-) -> typing.Generator:
-    """Return a list of urls (strings) to ocr files listed on jsru for the given query."""
-
-    # ------
-    # check compatibility of preferred_sample_size and block_size
-    # ------
-    assert preferred_sample_size >= block_size
-    # assert preferred_sample_size % block_size == 0
-
-    # ------
-    # get count of matching records
-    # ------
-    base_url = "http://jsru.kb.nl/sru/sru?recordSchema=ddd&x-collection=DDD_artikel"
-
-    response: dict = get_response(base_url + f"&query=({query})")
-
-    # query does not return result
-    if response is None:
-
-        return
-        yield
-
-    # query does return result
-    else:
-
-        response_dict: dict = xmltodict.parse(response.text)
-        n = int(response_dict["srw:searchRetrieveResponse"]["srw:numberOfRecords"])
-        print(f"query={query}, matching articles = {n}")
-
-        # ------
-        # jsru retrieves page blocks of results. Hence, we sample contiguous blocks
-        # of ocr urls for ease. build an iterable of sample starting points of the
-        # contiguous blocks, wrt., JSRU list.
-        # ------
-
-        sample_size = min(n, preferred_sample_size)
-
-        # x = start indices of all possible blocks
-        x: list[int] = list(range(0, sample_size, block_size))
-
-        # how many blocks to sample
-        size: int = min(math.ceil(sample_size / block_size), len(x))
-
-        sample_start_indices: np.ndarray = np.random.choice(
-            x,
-            size=size,
-            replace=False,
+    contains: list[str] = list(
+        map(
+            lambda x: f'"{" OR ".join(x)}"' if type(x) == list else x,
+            config["contains"],
         )
+    )
 
-        # yield sampled urls
-        for ocr_url in gen_ocr_urls_block(
-            sample_start_indices, block_size=block_size, query=query
-        ):
-            yield ocr_url
+    dates_within: list[str] = list(
+        map(lambda x: f'date within "{x}"', config["dates_within"])
+    )
 
-
-def gen_ocr_urls_block(
-    sample_start_indices: typing.Iterable, block_size: int, query: str
-) -> typing.Generator:
-    """Return a generator of sampled record orc urls (str) wrt., a selected jsru block."""
-
-    base_url = "http://jsru.kb.nl/sru/sru?recordSchema=ddd&x-collection=DDD_artikel"
-
-    for start_index in sample_start_indices:
-
-        page_url = (
-            base_url
-            + f"&startRecord={str(start_index)}&maximumRecords={block_size}"
-            + f"&query=({query})"
-        )
-
-        raw_response = get_response(page_url)
-        page: dict = xmltodict.parse(raw_response.text)
-
-        # if multiple records associated with query
-        if (
-            type(page["srw:searchRetrieveResponse"]["srw:records"]["srw:record"])
-            == list
-        ):
-            for record in page["srw:searchRetrieveResponse"]["srw:records"][
-                "srw:record"
-            ]:
-                ocr_url = record["srw:recordData"]["dc:identifier"]
-                yield ocr_url
-        # if only a single result associated with query
-        else:
-            ocr_url = page["srw:searchRetrieveResponse"]["srw:records"]["srw:record"][
-                "srw:recordData"
-            ]["dc:identifier"]
-            yield ocr_url
+    # yield products of these components as fully-formed query strings.
+    for t in product(
+        *list(filter(lambda x: x, [contains, types, papertitles, dates_within]))
+    ):
+        yield base + "&query=(" + " AND ".join(t) + ")"
 
 
 def gen_threaded(
@@ -328,7 +244,6 @@ def gen_threaded(
     if chunk_size:
         chunks = gen_chunks(iterable, chunk_size)
     else:
-        # chunks = map(lambda i: iterable, range(1))  # chunks contains a single chunk
         chunks = [iterable]
 
     for chunk in chunks:
@@ -388,18 +303,6 @@ def get_response(
 
     # if count exceeded
     return None
-
-
-def dump_to_json(obj, json_path: pathlib.Path) -> None:
-    """save obj to file given by json_path"""
-
-    # ensure the parent folder branch to hold the json exists
-    enclosing_folder: pathlib.Path = json_path.parent
-    enclosing_folder.mkdir(exist_ok=True, parents=True)
-
-    # save container to json
-    with open(json_path, "w") as f:
-        json.dump(obj, f, indent=4)
 
 
 if __name__ == "__main__":
