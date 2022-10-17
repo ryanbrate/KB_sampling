@@ -4,7 +4,10 @@ E.g.,
 python3 retrieve_url.py "http://resolver.kb.nl/resolve?urn=dts:2232001:mpeg21:0003:ocr"
 
 Viewable on browser as:
-"http://resolver.kb.nl/resolve?urn=MMKB15:000904012:mpeg21:a00011:ocr"
+http://resolver.kb.nl/resolve?urn=MMKB15:000904012:mpeg21:a00011:ocr
+
+Viewable in raw format as:
+https://www.delpher.nl/nl/kranten/view?query=&coll=ddd&resultscoll=dddtitel&identifier=ABCDDD:010824507:mpeg21:a0463&rowid=1
 
 """
 import json
