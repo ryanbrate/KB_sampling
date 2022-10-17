@@ -37,6 +37,7 @@ def main():
         ):
 
             query_part:str = metadata_csv_fp.stem
+            print(f"Downloading ocrs corresponding to collection: {str(metadata_csv_fp)}")
             collection_fp = output_dir / "collection" / f"{query_part}.json"
 
             # skip pull of pulled collection already exists.
