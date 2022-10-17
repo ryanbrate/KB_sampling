@@ -44,7 +44,7 @@ def main():
 
                 # ocr article codes to D/L
                 df: pd.DataFrame = pd.read_csv(metadata_csv_fp)
-                ocr_codes: pd.Series = df.loc[1:100000, "ddd:metadataKey"].apply(
+                ocr_codes: pd.Series = df.loc[:, "ddd:metadataKey"].apply(
                     lambda x: f"{x}:ocr"
                 )
 
