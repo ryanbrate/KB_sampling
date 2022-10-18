@@ -56,7 +56,7 @@ def main():
                         f"http://resolver.kb.nl/resolve?urn={ocr_code}"
                         for ocr_code in ocr_codes
                     ),
-                    f=partial(response_text, request_kwargs={"timeout": 0.1}),
+                    f=partial(response_text, request_kwargs={"timeout": 0.01}),
                     chunk_size=1000,
                     p_bar=p_bar
                 )
@@ -83,10 +83,10 @@ def process_text(t)->typing.Union[None, dict]:
 
     ocr_code, response_text = t
 
-    if response_text is not None:
+    try:
         ocr: dict = xmltodict.parse(response_text.encode("latin-1").decode("utf-8"))
         return (ocr_code, ocr)
-    else:
+    except:
         return (ocr_code, None)
 
 
