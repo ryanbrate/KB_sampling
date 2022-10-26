@@ -51,14 +51,10 @@ def main():
             # ------
 
             # query part of query url
-            query_part: str = re.search(r"query=\((.+)\)", query_url).groups()[
-                0
-            ]
+            query_part: str = re.search(r"query=\((.+)\)", query_url).groups()[0]
 
             # container to hold sampled record metadata
-            metadata: dict = {
-                key: [] for key in config["recordData"]
-            }  
+            metadata: dict = {key: [] for key in config["recordData"]}
 
             metadata_fp = output_dir / "metadata" / f"{query_part}.csv"
             metadata_fp.parent.mkdir(exist_ok=True, parents=True)
@@ -127,9 +123,20 @@ def main():
                         pbar.update(len(block_records))
 
                 # ------
+                # make a dataframe
+                # ------
+                metadata_df = pd.DataFrame(metadata)
+
+                # ------
+                # add doc_label column, i.e., the url
+                # ------
+                f = lambda x: f"http://resolver.kb.nl/resolve?urn={x}:ocr"
+                metadata_df["doc_label"] = metadata_df["ddd:metadataKey"].apply(f)
+
+                # ------
                 # save csv of metadata
                 # ------
-                pd.DataFrame(metadata).to_csv(metadata_fp)
+                metadata_df.to_csv(metadata_fp)
 
 
 def n_available(query: str) -> int:
