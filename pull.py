@@ -8,6 +8,8 @@ import json
 import pathlib
 import typing
 from functools import partial
+import numpy as np
+import math
 
 import pandas as pd
 import requests
@@ -49,25 +51,58 @@ def main():
                     lambda x: f"{x}:ocr"
                 )
 
-                # iterable of (code, response.text) - I/0 intensive, hence use threading.
-                p_bar = tqdm(total=len(ocr_codes), desc="getting responses")
-                code_and_response: typing.Generator = gen_threaded(
-                    (
-                        f"http://resolver.kb.nl/resolve?urn={ocr_code}"
-                        for ocr_code in ocr_codes
-                    ),
-                    f=partial(response_text, request_kwargs={"timeout": 0.01}),
-                    chunk_size=1000,
-                    p_bar=p_bar
-                )
+                # get ocrs in blocks
+                counter = 0
+                block_max_size=50000
+                temp_fps: list[pathlib.Path] = []
+                for i, ocr_codes_block in enumerate(np.array_split(ocr_codes, math.ceil(len(ocr_codes) / block_max_size) ), start=1):
 
-                # process the ocr responses - CPU intensive, hence use multiprocess
-                code_and_ocr = filter(lambda x: x[1], process_map(process_text, code_and_response, chunksize=1000))
+                    temp_fp = output_dir / "collection" / f"{query_part}_{i}.json"
+                    temp_fps.append(temp_fp)
 
-                # save
-                collection_fp.parent.mkdir(exist_ok=True, parents=True)
-                with open(collection_fp, "w") as f:
-                    json.dump(list(code_and_ocr), f, ensure_ascii=False, indent=4)
+                    if temp_fp.exists()==False:
+
+                        print(f"\tblock {i}")
+
+                        # iterable of (code, response.text) - I/0 intensive, hence use threading.
+                        p_bar = tqdm(total=len(ocr_codes_block), desc="getting responses")
+                        code_and_response: typing.Generator = gen_threaded(
+                            (
+                                f"http://resolver.kb.nl/resolve?urn={ocr_code}"
+                                for ocr_code in ocr_codes_block
+                            ),
+                            f=partial(response_text, request_kwargs={"timeout": 0.01}),
+                            max_workers=100,
+                            chunk_size=1000,
+                            p_bar=p_bar
+                        )
+
+                        # process the ocr responses - CPU intensive, hence use multiprocess
+                        code_and_ocr = filter(lambda x: x[1], process_map(process_text, code_and_response, chunksize=5000))
+
+                        # save
+                        temp_fp.parent.mkdir(exist_ok=True, parents=True)
+                        with open(temp_fp, "w") as f:
+                            json.dump(list(code_and_ocr), f, ensure_ascii=False, indent=4)
+
+                # merge temp json files
+                if any([fp for fp in temp_fps if fp.exists()]):
+
+                    print('\tmerging temp jsons')
+                    collection = []
+
+                    for temp_fp in tqdm(temp_fps):
+
+                        with open(temp_fp, "r") as f:
+                            collection.extend(json.load(f))
+
+                    with open(collection_fp, "w") as f:
+                        json.dump(collection, f)
+                        
+
+                    
+                    
+
 
 def response_text(url, **request_kwargs)->typing.Union[None, str]:
     """ Return response.text for passed url"""
