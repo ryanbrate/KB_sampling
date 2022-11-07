@@ -1,21 +1,22 @@
 """ pull ocr files from sampled metadata files
 """
 
-import time
 import concurrent.futures
 import itertools
 import json
+import math
 import pathlib
+import time
 import typing
 from functools import partial
-import numpy as np
-import math
 
+import numpy as np
 import pandas as pd
 import requests
 import xmltodict
 from tqdm import tqdm
 from tqdm.contrib.concurrent import process_map
+
 
 def main():
 
@@ -34,12 +35,12 @@ def main():
         metadata_csv_fps: typing.Iterator[pathlib.Path] = metadata_dir.glob("*.csv")
 
         # iterate over each query's metadata
-        for metadata_csv_fp in tqdm(
-            metadata_csv_fps, desc="collections"
-        ):
+        for metadata_csv_fp in tqdm(metadata_csv_fps, desc="collections"):
 
-            query_part:str = metadata_csv_fp.stem
-            print(f"Downloading ocrs corresponding to collection: {str(metadata_csv_fp)}")
+            query_part: str = metadata_csv_fp.stem
+            print(
+                f"Downloading ocrs corresponding to collection: {str(metadata_csv_fp)}"
+            )
             collection_fp = output_dir / "collection" / f"{query_part}.json"
 
             # skip pull of pulled collection already exists.
@@ -53,19 +54,26 @@ def main():
 
                 # get ocrs in blocks
                 counter = 0
-                block_max_size=50000
+                block_max_size = 50000
                 temp_fps: list[pathlib.Path] = []
-                for i, ocr_codes_block in enumerate(np.array_split(ocr_codes, math.ceil(len(ocr_codes) / block_max_size) ), start=1):
+                for i, ocr_codes_block in enumerate(
+                    np.array_split(
+                        ocr_codes, math.ceil(len(ocr_codes) / block_max_size)
+                    ),
+                    start=1,
+                ):
 
                     temp_fp = output_dir / "collection" / f"{query_part}_{i}.json"
                     temp_fps.append(temp_fp)
 
-                    if temp_fp.exists()==False:
+                    if temp_fp.exists() == False:
 
                         print(f"\tblock {i}")
 
                         # iterable of (code, response.text) - I/0 intensive, hence use threading.
-                        p_bar = tqdm(total=len(ocr_codes_block), desc="getting responses")
+                        p_bar = tqdm(
+                            total=len(ocr_codes_block), desc="getting responses"
+                        )
                         code_and_response: typing.Generator = gen_threaded(
                             (
                                 f"http://resolver.kb.nl/resolve?urn={ocr_code}"
@@ -74,16 +82,23 @@ def main():
                             f=partial(response_text, request_kwargs={"timeout": 0.01}),
                             max_workers=100,
                             chunk_size=1000,
-                            p_bar=p_bar
+                            p_bar=p_bar,
                         )
 
                         # process the ocr responses - CPU intensive, hence use multiprocess
-                        code_and_ocr = filter(lambda x: x[1], process_map(process_text, code_and_response, chunksize=5000))
+                        code_and_ocr = filter(
+                            lambda x: x[1],
+                            process_map(
+                                process_text, code_and_response, chunksize=5000
+                            ),
+                        )
 
                         # save
                         temp_fp.parent.mkdir(exist_ok=True, parents=True)
                         with open(temp_fp, "w") as f:
-                            json.dump(list(code_and_ocr), f, ensure_ascii=False, indent=4)
+                            json.dump(
+                                list(code_and_ocr), f, ensure_ascii=False, indent=4
+                            )
 
                 # # merge temp json files
                 # if any([fp for fp in temp_fps if fp.exists()]):
@@ -98,14 +113,16 @@ def main():
 
                 #     with open(collection_fp, "w") as f:
                 #         json.dump(collection, f)
-                        
 
-                    
-                    
+        # save the config
+        config_fp = output_dir / "config.json"
+        config_fp.parent.mkdir(exist_ok=True, parents=True)
+        with open(config_fp, "w") as f:
+            json.dump(config, f)
 
 
-def response_text(url, **request_kwargs)->typing.Union[None, str]:
-    """ Return response.text for passed url"""
+def response_text(url, **request_kwargs) -> typing.Union[None, str]:
+    """Return response.text for passed url"""
 
     response = get_response(url, request_kwargs=request_kwargs)
     if response is None:
@@ -113,8 +130,9 @@ def response_text(url, **request_kwargs)->typing.Union[None, str]:
     else:
         return response.text
 
-def process_text(t)->typing.Union[None, dict]:
-    """ Return (ocr_code, ocr)"""
+
+def process_text(t) -> typing.Union[None, dict]:
+    """Return (ocr_code, ocr)"""
 
     ocr_code, response_text = t
 
