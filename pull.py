@@ -85,19 +85,19 @@ def main():
                         with open(temp_fp, "w") as f:
                             json.dump(list(code_and_ocr), f, ensure_ascii=False, indent=4)
 
-                # merge temp json files
-                if any([fp for fp in temp_fps if fp.exists()]):
+                # # merge temp json files
+                # if any([fp for fp in temp_fps if fp.exists()]):
 
-                    print('\tmerging temp jsons')
-                    collection = []
+                #     print('\tmerging temp jsons')
+                #     collection = []
 
-                    for temp_fp in tqdm(temp_fps):
+                #     for temp_fp in tqdm(temp_fps):
 
-                        with open(temp_fp, "r") as f:
-                            collection.extend(json.load(f))
+                #         with open(temp_fp, "r") as f:
+                #             collection.extend(json.load(f))
 
-                    with open(collection_fp, "w") as f:
-                        json.dump(collection, f)
+                #     with open(collection_fp, "w") as f:
+                #         json.dump(collection, f)
                         
 
                     
