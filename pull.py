@@ -33,6 +33,12 @@ def main():
 
         # get config options
         output_dir: pathlib.Path = resolve_fp(config["output_dir"], path_syns=path_syns)
+        switch: bool = config["switch"]
+
+        # skip the config?
+        if switch == False:
+            "config: {config['name'] switched off ... skipping}"
+            continue
 
         # get an iterator of metadata csvs, where each csv corresponding to a query
         metadata_dir: pathlib.Path = output_dir / "metadata"

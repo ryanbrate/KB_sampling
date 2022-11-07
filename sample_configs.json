@@ -1,6 +1,7 @@
 [
     {
         "name": "ALL",
+        "switch": false,
         "output_dir": "DATA/KB_sampling/ALL",
         "n": -1,
         "contiguous_n": 1000,
@@ -37,6 +38,7 @@
     },
     {
         "name": "Example",
+        "switch": true,
         "output_dir": "DATA/KB_sampling/Example",
         "n": 100000,
         "contiguous_n": 1000,

@@ -38,6 +38,12 @@ def main():
         # config options
         output_dir: pathlib.Path = resolve_fp(config["output_dir"], path_syns=path_syns)
         n_wanted: int = config["n"]  # sample size wanted
+        switch: bool = config["switch"]
+
+        # skip the config?
+        if switch == False:
+            "config: {config['name'] switched off ... skipping}"
+            continue
 
         # generator of all query urls
         queries: typing.Generator = gen_queries(config)
