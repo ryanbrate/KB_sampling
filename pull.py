@@ -20,15 +20,19 @@ from tqdm.contrib.concurrent import process_map
 
 def main():
 
+    # load the path synonyms used in configs
+    with open("path_syns.json", "r") as f:
+        path_syns: dict = json.load(f)
+
+    # load the configs
     with open("sample_configs.json", "r") as f:
         configs: list[dict] = json.load(f)
 
+    # iterate over configs
     for config in configs:
 
         # get config options
-        output_dir: pathlib.Path = (
-            pathlib.Path(config["output_dir"]).expanduser().resolve()
-        )
+        output_dir: pathlib.Path = resolve_fp(config["output_dir"], path_syns=path_syns)
 
         # get an iterator of metadata csvs, where each csv corresponding to a query
         metadata_dir: pathlib.Path = output_dir / "metadata"
@@ -237,6 +241,30 @@ def get_response(
 
     # if count exceeded
     return None
+
+
+def resolve_fp(path: str, path_syns: typing.Union[None, dict] = None) -> pathlib.Path:
+    """Resolve path synonyns, ~, and resolve path, returning pathlib.Path.
+
+    Args:
+        path (str): file path or dir
+        path_syns (dict): dict of
+            string to be replaced : string to do the replacing
+
+    E.g.,
+        path_syns = {"DATA": "~/documents/data"}
+
+        resolve_fp("DATA/project/run.py")
+        # >> user/home/john_smith/documents/data/project/run.py
+    """
+
+    # resolve path synonyms
+    if path_syns is not None:
+        for fake, real in path_syns.items():
+            path = path.replace(fake, real)
+
+    # expand user and resolve path
+    return pathlib.Path(path).expanduser().resolve()
 
 
 if __name__ == "__main__":
