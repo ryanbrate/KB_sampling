@@ -1,0 +1,44 @@
+[
+    {
+        "desc": "51,91 polyvocal subsets",
+        "switch": true,
+        "input": [
+            "DATA/KB_sampling/ALL/metadata",
+            "re.compile(r\"19[9|5]1\")"
+        ],
+        "cuts": [
+            {
+                "ddd:papertitle": "re.compile(r\"^Trouw$\")",
+                "dc:date": "re.compile(\"1951\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(r\"^De Volkskrant$\")",
+                "dc:date": "re.compile(\"1951\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(r\"^De Telegraaf$\")",
+                "dc:date": "re.compile(\"1951\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Het vr\u0133e volk : democratisch-socialistisch dagblad$\")",
+                "dc:date": "re.compile(\"1951\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(r\"^Trouw$\")",
+                "dc:date": "re.compile(\"1991\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(r\"^De Volkskrant$\")",
+                "dc:date": "re.compile(\"1991\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(r\"^De Telegraaf$\")",
+                "dc:date": "re.compile(\"1991\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Het vr\u0133e volk : democratisch-socialistisch dagblad$\")",
+                "dc:date": "re.compile(\"1991\")"
+            }
+        ]
+    }
+]
