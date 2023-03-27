@@ -1,0 +1,10 @@
+[
+    {
+        "desc": "51,91",
+        "switch": true,
+        "input": [
+            "DATA/KB_sampling/ALL/metadata",
+            "re.compile(r\"19[9|5]1\")"
+        ]
+    }
+]

@@ -1,0 +1,60 @@
+[
+    {
+        "desc": "51,91 polyvocal subsets",
+        "switch": true,
+        "input": [
+            "DATA/KB_sampling/ALL/metadata",
+            "re.compile(r\"19[9|5]1\")"
+        ],
+        "cuts": [
+            {
+                "dc:date": "re.compile(\"1951\")"
+            },
+            {
+                "dc:date": "re.compile(\"1991\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^De Standaard$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Friesch Dagblad$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Trouw$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Nederlands Dagblad$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Reformatisch Dagblad$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^De Tijd$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^De Volkskrant$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Het Vrije Volk$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Het Parool$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Staatscourant$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"Algemeen Handelsblad\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^Niewe Rotterdamsche$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^NRC Handelsblad$\")"
+            },
+            {
+                "ddd:papertitle": "re.compile(\"^De Telegraaf$\")"
+            }
+        ]
+    }
+]

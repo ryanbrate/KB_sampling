@@ -1,0 +1,59 @@
+[
+    {
+        "desc": "51,91 polyvocal subsets",
+        "switch": true,
+        "metadata": [
+            "DATA/KB_sampling/ALL/metadata",
+            "re.compile(r\"19[5,6,7,8,9][1,5,9]\")",
+            "doc_label"
+        ],
+        "collections": [
+            "DATA/KB_sampling/ALL/collection",
+            "re.compile(r\"19[5,6,7,8,9][1,5,9]\")"
+        ],
+        "cuts": [
+            {
+                "dc:date": "re.compile(r\"1951\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1955\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1959\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1961\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1965\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1969\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1971\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1975\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1979\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1981\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1985\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1989\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1991\")"
+            },
+            {
+                "dc:date": "re.compile(r\"1995\")"
+            }
+        ]
+    }
+]
